@@ -1,0 +1,17 @@
+<!-- PLACEHOLDER: replace with a real photo of the toothpaste squeezer (see README "Swap the product photos"). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#e9f1fc"/>
+  <!-- toothpaste tube -->
+  <g transform="rotate(-8 400 300)">
+    <path d="M150 250 h420 l40 20 v60 l-40 20 h-420 z" fill="#ffffff" stroke="#9db8dc" stroke-width="4"/>
+    <rect x="610" y="270" width="60" height="60" rx="8" fill="#5b8fd6"/>
+    <rect x="130" y="244" width="30" height="112" rx="4" fill="#d9e2ef"/>
+    <!-- squeezer clip -->
+    <rect x="300" y="210" width="110" height="180" rx="22" fill="#1d4f91"/>
+    <rect x="322" y="286" width="66" height="28" rx="6" fill="#e9f1fc"/>
+    <text x="355" y="252" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">YOUR</text>
+    <text x="355" y="356" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">CLINIC</text>
+  </g>
+  <circle cx="680" cy="110" r="38" fill="#5b8fd6" opacity=".35"/>
+  <circle cx="680" cy="110" r="13" fill="#f6cf4a"/>
+</svg>
