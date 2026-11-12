@@ -84,6 +84,16 @@ When you've registered at alzheimer.ca/Fundraiser, find `PLACEHOLDER: fundraisin
 <p><a href="YOUR-FUNDRAISING-PAGE-URL">See our fundraising page</a></p>
 ```
 
+## Add a clinic to the supporters list
+
+The dentist page and flyer promise that every clinic that orders is listed on the page as a supporter. When an order comes in, check that the clinic is OK being listed (the order email asks), then:
+
+1. In `dentists/index.html`, search for `SUPPORTERS`.
+2. Add one line per clinic inside the `<ul class="supporters">` list, for example `<li>Bathurst Finch Dental Office</li>`.
+3. When you add the first clinic, delete the `<li class="first">Be the first clinic on the list!</li>` line.
+
+Add the Tally question too: **OK to list your clinic on the website as a supporter?** (Yes / No).
+
 ## Update the "raised so far" figure
 
 Each page has this line in its charity section, hidden until you're ready to show it:

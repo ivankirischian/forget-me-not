@@ -244,6 +244,11 @@ p:last-child { margin-bottom: 0; }
 .charity .big { font-size: 1.35rem; font-weight: 700; color: var(--ink); max-width: 30ch; margin: 0 auto 1rem; }
 .charity .raised { font-size: 1.05rem; color: var(--ink); }
 .charity .raised strong { font-size: 1.4rem; color: var(--blue-800); }
+.charity h3 { margin-top: 1.75rem; }
+.supporters { list-style: none; padding: 0; margin: 0.5rem 0; font-weight: 600; color: var(--ink); }
+.supporters li { margin: 0.25rem 0; }
+.supporters .first { font-weight: 400; font-style: italic; color: var(--muted); }
+.charity .note-small { font-size: 0.95rem; color: var(--muted); }
 .flower-divider { width: 56px; height: 56px; margin: 0 auto 1rem; }
 
 /* ---------- Order form ---------- */
