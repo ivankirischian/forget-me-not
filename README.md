@@ -42,21 +42,35 @@ Each page has a "Hi, I'm Ivan Kirischian" box, which shows a flower placeholder 
 
 ## How people order and pay
 
-Most sales start with an in-person visit, so each product page offers three ways to order:
+**Dentists:** you drop by each clinic and leave a flyer plus a sample squeezer printed with that clinic's name (make it with `add_text.py`, see "Sample squeezers" below), then leave. The dentist page is written for someone holding that sample: it says the sample is theirs to keep, that orders are printed to match it, and that a mockup is only needed if they want changes. Payment is due on delivery.
+
+**Realtors:** most sales still start with a visit or a flyer. The realtor page keeps the mockup step and the "already ordered in person" note.
+
+Each product page offers these ways to order:
 - the order form (or the email button until Tally is set up),
 - a **Text Ivan** button, which opens a text to 415-456-1579 with a short message already filled in,
-- ordering in person. The page tells people who already ordered with you that they don't need to fill in the form.
+- (realtors only) ordering in person. The page tells people who already ordered with you that they don't need to fill in the form.
 
-Payment is **cash on delivery or Interac e-Transfer**, after the customer approves the mockup. You deliver every order by hand. If any of that changes, update the "How ordering works" steps (dentists), the line under Pricing (realtors), and the "How do I pay?" and "How is it delivered?" FAQ entries on both pages.
+Payment is **cash on delivery or Interac e-Transfer**. You deliver every order by hand. If any of that changes, update the "How ordering works" steps (dentists), the line under Pricing (realtors), and the "How do I pay?" and "How is it delivered?" FAQ entries on both pages.
+
+## Sample squeezers
+
+The 3D files live outside this repo, in `C:\Users\Ivan\Documents\forget-me-not-3d\`. To make a clinic's sample:
+
+```
+python add_text.py "Bathurst Finch Dental Office" "416-229-2444"
+```
+
+This writes `squeezers\<clinic name>.3mf` (phone number on top, clinic name below, raised 0.5 mm), a single-colour `.stl` and a preview PNG. Check the spelling in the preview, and confirm the phone number with the clinic if it came from an online directory. For two colours, change filament at Z = 2.6 mm.
 
 ## Add the Tally order forms
 
 Until the forms are in, each page shows an "Order by text or email" box with pre-filled email and text buttons, so the QR codes already work.
 
 1. Create two free forms at https://tally.so.
-   - **Dentists:** Clinic name; Text to print (short answer with a character limit, about 20 characters, to be checked against the print area); Contact name; Email; Phone; Pack size (25 or 50); Colour preference; Delivery notes; How did you hear about this?
+   - **Dentists:** Clinic name; Pack size (25 or 50); Contact name; Email; Phone; Same as the sample? (Yes / I'd like changes); Changes (short answer, shown only if they want changes); Delivery notes. You don't need a "How did you hear" question here, because every clinic got a sample.
    - **Realtors:** Name; Brokerage; Email; Phone; Link to program (URL); Logo (file upload); Token colour; Number of packs (10 tokens each); How did you hear about this?
-   - Make **How did you hear about this?** a required multiple-choice question with these options: *Ivan visited and we talked*, *Found a flyer Ivan left*, *Someone told me*, *Other*. Optionally add a short-answer field, "Visit # on your flyer (if any)".
+   - On the realtor form, make **How did you hear about this?** a required multiple-choice question with these options: *Ivan visited and we talked*, *Found a flyer Ivan left*, *Someone told me*, *Other*. Optionally add a short-answer field, "Visit # on your flyer (if any)".
 2. In each form, go to Settings > Notifications and turn on self email notifications so each submission is sent to ivan.kirischian@gmail.com.
 3. Go to Share > Embed > **Standard**. Turn on *Dynamic height*, *Hide form title* and *Transparent background*, then copy the code.
 4. In each page, find `PLACEHOLDER: TALLY FORM`. Paste the code there, then delete the whole `<div class="form-fallback"> … </div>` block below it.
@@ -82,6 +96,8 @@ Each page has this line in its charity section, hidden until you're ready to sho
 Change `$0` to the current total and delete the word `hidden`. Search for `RAISED-SO-FAR` to find it in `index.html`, `dentists/index.html` and `realtors/index.html`, and use the same figure on all three.
 
 ## Track which visits turn into orders
+
+For **dentists**, every visit is the same (a flyer plus a named sample), so the clinic name on each order tells you which visit it came from. Log the date you dropped off each sample, and mark the row "ordered" when an order comes in. That shows how many samples it takes to get an order, and how long clinics take to reply. For **realtors**:
 
 1. Keep a simple visit log in a notebook or spreadsheet, with one row per visit: **visit #**, date, office name, and whether you *talked to someone* or *left a flyer*.
 2. When you leave a flyer, write the date and the visit # in the blank at the bottom of it.
