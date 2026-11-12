@@ -48,7 +48,7 @@ Each page has a "Hi, I'm Ivan Kirischian" box, which shows a flower placeholder 
 
 Each product page offers these ways to order:
 - the order form (or the email button until Tally is set up),
-- a **Text Ivan** button, which opens a text to 415-456-1579 with a short message already filled in,
+- a **Text Ivan** button, which opens a text to 416-456-1579 with a short message already filled in,
 - (realtors only) ordering in person. The page tells people who already ordered with you that they don't need to fill in the form.
 
 Payment is **cash on delivery or Interac e-Transfer**. You deliver every order by hand. If any of that changes, update the "How ordering works" steps (dentists), the line under Pricing (realtors), and the "How do I pay?" and "How is it delivered?" FAQ entries on both pages.
