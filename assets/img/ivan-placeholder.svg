@@ -1,0 +1,13 @@
+<!-- PLACEHOLDER: replace with a photo of Ivan (see README "Add your photo"). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#e9f1fc"/>
+  <g transform="translate(100 100) scale(1.1)" fill="#5b8fd6">
+    <circle cx="0" cy="-24" r="19"/>
+    <circle cx="0" cy="-24" r="19" transform="rotate(72)"/>
+    <circle cx="0" cy="-24" r="19" transform="rotate(144)"/>
+    <circle cx="0" cy="-24" r="19" transform="rotate(216)"/>
+    <circle cx="0" cy="-24" r="19" transform="rotate(288)"/>
+    <circle cx="0" cy="0" r="13" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="9" fill="#f6cf4a"/>
+  </g>
+</svg>

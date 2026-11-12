@@ -33,13 +33,30 @@ Before you print, check that the prices, deadline and charity wording match the 
 3. Do the same in `realtors/index.html` with `token-placeholder.svg` → `token.jpg`.
 4. Rewrite the `alt="..."` text so it describes what the photo actually shows.
 
+## Add your photo
+
+Each page has a "Hi, I'm Ivan Kirischian" box, which shows a flower placeholder until you add a photo.
+
+1. Save a square photo of yourself (about 400×400 px, face centred) as `assets/img/ivan.jpg`.
+2. Search for `PLACEHOLDER: photo of Ivan` in `index.html`, `dentists/index.html` and `realtors/index.html`. In each one, change `ivan-placeholder.svg` to `ivan.jpg`. The page crops the photo into a circle.
+
+## How people order and pay
+
+Most sales start with an in-person visit, so each product page offers three ways to order:
+- the order form (or the email button until Tally is set up),
+- a **Text Ivan** button, which opens a text to 415-456-1579 with a short message already filled in,
+- ordering in person. The page tells people who already ordered with you that they don't need to fill in the form.
+
+Payment is **cash on delivery or Interac e-Transfer**, after the customer approves the mockup. You deliver every order by hand. If any of that changes, update the "How ordering works" steps (dentists), the line under Pricing (realtors), and the "How do I pay?" and "How is it delivered?" FAQ entries on both pages.
+
 ## Add the Tally order forms
 
-Until the forms are in, each page shows an "Order by email or phone" box with a pre-filled email button, so the QR codes already work.
+Until the forms are in, each page shows an "Order by text or email" box with pre-filled email and text buttons, so the QR codes already work.
 
 1. Create two free forms at https://tally.so.
-   - **Dentists:** Clinic name; Text to print (short answer with a character limit, about 20 characters, to be checked against the print area); Contact name; Email; Phone; Pack size (25 or 50); Colour preference; Delivery notes.
-   - **Realtors:** Name; Brokerage; Email; Phone; Link to program (URL); Logo (file upload); Token colour; Number of packs (10 tokens each).
+   - **Dentists:** Clinic name; Text to print (short answer with a character limit, about 20 characters, to be checked against the print area); Contact name; Email; Phone; Pack size (25 or 50); Colour preference; Delivery notes; How did you hear about this?
+   - **Realtors:** Name; Brokerage; Email; Phone; Link to program (URL); Logo (file upload); Token colour; Number of packs (10 tokens each); How did you hear about this?
+   - Make **How did you hear about this?** a required multiple-choice question with these options: *Ivan visited and we talked*, *Found a flyer Ivan left*, *Someone told me*, *Other*. Optionally add a short-answer field, "Visit # on your flyer (if any)".
 2. In each form, go to Settings > Notifications and turn on self email notifications so each submission is sent to ivan.kirischian@gmail.com.
 3. Go to Share > Embed > **Standard**. Turn on *Dynamic height*, *Hide form title* and *Transparent background*, then copy the code.
 4. In each page, find `PLACEHOLDER: TALLY FORM`. Paste the code there, then delete the whole `<div class="form-fallback"> … </div>` block below it.
@@ -63,6 +80,25 @@ Each page has this line in its charity section, hidden until you're ready to sho
 ```
 
 Change `$0` to the current total and delete the word `hidden`. Search for `RAISED-SO-FAR` to find it in `index.html`, `dentists/index.html` and `realtors/index.html`, and use the same figure on all three.
+
+## Track which visits turn into orders
+
+1. Keep a simple visit log in a notebook or spreadsheet, with one row per visit: **visit #**, date, office name, and whether you *talked to someone* or *left a flyer*.
+2. When you leave a flyer, write the date and the visit # in the blank at the bottom of it.
+3. Every order says how the customer heard about it (Tally question, email template, or you ask in person) and names the clinic or brokerage. Match each order to the log and mark that row "ordered".
+
+After a week you'll see which approach works better (talking vs. leaving a flyer, and dentists vs. realtors), so you can spend your remaining visits there before the Nov 27 deadline.
+
+## Printable flyers
+
+The flyers are **not** in this repo, so they never become public pages. They live in `C:\Users\Ivan\Documents\forget-me-not-flyers\`:
+- `dentists-flyer.pdf` and `realtors-flyer.pdf`: letter size, ready to print.
+- `dentists.html` and `realtors.html`: the source for each flyer.
+- `make_flyers.py`: rebuilds both, using the QR codes and product images from this repo.
+
+To change a flyer, edit its text in `make_flyers.py` and run `python make_flyers.py` from that folder. It needs Google Chrome. If you swap the product photos on the site, update the flyer image too. In `make_flyers.py`, change `squeezer-placeholder.svg` and `token-placeholder.svg` to your photo filenames (.jpg or .png work).
+
+Each flyer has the price, the deadline, the charity line, a large QR code, "text Ivan" with your number, and a "Visited by Ivan on ____ · Visit # ____" line for your log. Print a test page and scan the QR code with a phone before printing a batch.
 
 ## QR codes and preview images
 
