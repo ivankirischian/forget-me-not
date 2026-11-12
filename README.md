@@ -20,7 +20,7 @@ Every placeholder is marked in the HTML with a `PLACEHOLDER` comment. Search the
 
 Prices and the deadline are written out as plain text. Each page holds its own copy, so edit each file that mentions them:
 
-- **Squeezers** (`dentists/index.html`): the hero note (`50¢ each · Order by Nov 27`), the Pricing section (the two `.price` boxes and the "50¢ each, in packs of 25 or 50" line), the deadline line, and the FAQ. Also update the `<meta name="description">` and `og:description` tags at the top.
+- **Squeezers** (`dentists/index.html`): the hero note (`50¢ each · Order by Nov 27`), the Pricing section (the `.price` box and the "50¢ each" line), the deadline line, and the FAQ. Also update the `<meta name="description">` and `og:description` tags at the top.
 - **NFC tokens** (`realtors/index.html`): the hero note, the Pricing section, the deadline line, the FAQ, and the meta and `og:` tags.
 - **Preview images** (`assets/img/og-*.png`) also show the prices. If prices change, regenerate them (see "QR codes and preview images" below) or edit them in any image editor.
 
@@ -68,9 +68,9 @@ This writes `squeezers\<clinic name>.3mf` (phone number on top, clinic name belo
 Until the forms are in, each page shows an "Order by text or email" box with pre-filled email and text buttons, so the QR codes already work.
 
 1. Create two free forms at https://tally.so.
-   - **Dentists:** Clinic name; Pack size (25 or 50); Contact name; Email; Phone; Same as the sample? (Yes / I'd like changes); Changes (short answer, shown only if they want changes); Delivery notes. You don't need a "How did you hear" question here, because every clinic got a sample.
+   - **Dentists:** Clinic name; How many; Contact name; Email; Phone; Same as the sample? (Yes / I'd like changes); Changes (short answer, shown only if they want changes); Delivery notes. You don't need a "How did you hear" question here, because every clinic got a sample.
    - **Realtors:** Name; Brokerage; Email; Phone; Link to program (URL); Logo (file upload); Token colour; Number of packs (10 tokens each); How did you hear about this?
-   - On the realtor form, make **How did you hear about this?** a required multiple-choice question with these options: *Ivan visited and we talked*, *Found a flyer Ivan left*, *Someone told me*, *Other*. Optionally add a short-answer field, "Visit # on your flyer (if any)".
+   - On the realtor form, make **How did you hear about this?** a required multiple-choice question with these options: *Ivan visited and we talked*, *Found a flyer Ivan left*, *Someone told me*, *Other*.
 2. In each form, go to Settings > Notifications and turn on self email notifications so each submission is sent to ivan.kirischian@gmail.com.
 3. Go to Share > Embed > **Standard**. Turn on *Dynamic height*, *Hide form title* and *Transparent background*, then copy the code.
 4. In each page, find `PLACEHOLDER: TALLY FORM`. Paste the code there, then delete the whole `<div class="form-fallback"> … </div>` block below it.
@@ -109,8 +109,8 @@ Change `$0` to the current total and delete the word `hidden`. Search for `RAISE
 
 For **dentists**, every visit is the same (a flyer plus a named sample), so the clinic name on each order tells you which visit it came from. Log the date you dropped off each sample, and mark the row "ordered" when an order comes in. That shows how many samples it takes to get an order, and how long clinics take to reply. For **realtors**:
 
-1. Keep a simple visit log in a notebook or spreadsheet, with one row per visit: **visit #**, date, office name, and whether you *talked to someone* or *left a flyer*.
-2. When you leave a flyer, write the date and the visit # in the blank at the bottom of it.
+1. Keep a simple visit log in a notebook or spreadsheet, with one row per visit: date, office name, and whether you *talked to someone* or *left a flyer*.
+2. When you leave a flyer, write the date in the blank at the bottom of it.
 3. Every order says how the customer heard about it (Tally question, email template, or you ask in person) and names the clinic or brokerage. Match each order to the log and mark that row "ordered".
 
 After a week you'll see which approach works better (talking vs. leaving a flyer, and dentists vs. realtors), so you can spend your remaining visits there before the Nov 27 deadline.
@@ -124,7 +124,7 @@ The flyers are **not** in this repo, so they never become public pages. They liv
 
 To change a flyer, edit its text in `make_flyers.py` and run `python make_flyers.py` from that folder. It needs Google Chrome. If you swap the product photos on the site, update the flyer image too. The dentist flyer uses `squeezer.jpg`. For the realtor flyer, change `token-placeholder.svg` for the realtor flyer. Both .jpg and .png work.
 
-Each flyer has the price, the deadline, the charity line, a large QR code, "text Ivan" with your number, and a "Visited by Ivan on ____ · Visit # ____" line for your log. Print a test page and scan the QR code with a phone before printing a batch.
+Each flyer has the price, the deadline, the charity line, a large QR code, "text Ivan" with your number, and a "Visited by Ivan on ____" line. Print a test page and scan the QR code with a phone before printing a batch.
 
 ## QR codes and preview images
 
