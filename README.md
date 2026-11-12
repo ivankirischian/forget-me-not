@@ -4,9 +4,9 @@ A static fundraising site. 100% of what customers pay goes to the Alzheimer Soci
 
 | Page | Live URL | Who it's for |
 | --- | --- | --- |
-| `index.html` | https://testingtestytest.github.io/forget-me-not/ | Anyone who types the bare URL. Shows the brand, charity line and contact details, with no product links. |
-| `dentists/index.html` | https://testingtestytest.github.io/forget-me-not/dentists/ | Dentist flyer QR code |
-| `realtors/index.html` | https://testingtestytest.github.io/forget-me-not/realtors/ | Realtor flyer QR code and the sample token |
+| `index.html` | https://ivankirischian.github.io/forget-me-not/ | Anyone who types the bare URL. Shows the brand, charity line and contact details, with no product links. |
+| `dentists/index.html` | https://ivankirischian.github.io/forget-me-not/dentists/ | Dentist flyer QR code |
+| `realtors/index.html` | https://ivankirischian.github.io/forget-me-not/realtors/ | Realtor flyer QR code and the sample token |
 
 The site is plain HTML with one shared stylesheet (`assets/css/styles.css`). There's no build step. Edit a file, commit and push to `main`, and GitHub Pages republishes in about a minute.
 
@@ -67,8 +67,8 @@ Change `$0` to the current total and delete the word `hidden`. Search for `RAISE
 ## QR codes and preview images
 
 - `assets/qr/dentists.svg` and `assets/qr/realtors.svg` are for the flyers (vector, so they print sharp at any size). PNG copies sit next to them. Both have been test-decoded and open:
-  - https://testingtestytest.github.io/forget-me-not/dentists/
-  - https://testingtestytest.github.io/forget-me-not/realtors/
+  - https://ivankirischian.github.io/forget-me-not/dentists/
+  - https://ivankirischian.github.io/forget-me-not/realtors/
 - They use high error correction, so they still scan if a corner gets scuffed. Print them at least 2 cm (0.8 in) wide, and keep a white margin around them.
 - If the site address ever changes (for example, a custom domain), regenerate the QR codes **before** printing, and update the `canonical` and `og:` URLs at the top of each page. Search for `SITE URL`.
 - The link preview images are `assets/img/og-home.png`, `og-dentists.png` and `og-realtors.png` (1200×630).
@@ -78,7 +78,7 @@ Change `$0` to the current total and delete the word `hidden`. Search for `RAISE
 1. On GitHub, open the repo and go to **Settings > Pages**.
 2. Under **Build and deployment**, set **Source** to *Deploy from a branch*.
 3. Set **Branch** to `main` and the folder to `/ (root)`, then click **Save**.
-4. Wait about a minute, then refresh. The page shows "Your site is live at https://testingtestytest.github.io/forget-me-not/".
+4. Wait about a minute, then refresh. The page shows "Your site is live at https://ivankirischian.github.io/forget-me-not/".
 5. You can watch each deploy in the repo's **Actions** tab ("pages build and deployment").
 
 ## Accessibility notes
