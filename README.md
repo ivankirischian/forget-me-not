@@ -20,7 +20,7 @@ Every placeholder is marked in the HTML with a `PLACEHOLDER` comment. Search the
 
 Prices and the deadline are written out as plain text. Each page holds its own copy, so edit each file that mentions them:
 
-- **Squeezers** (`dentists/index.html`): the hero note (`$1 each · Order by Nov 27`), the Pricing section (the two `.price` boxes and the "$1 each, in packs of 25 or 50" line), the deadline line, and the FAQ. Also update the `<meta name="description">` and `og:description` tags at the top.
+- **Squeezers** (`dentists/index.html`): the hero note (`50¢ each · Order by Nov 27`), the Pricing section (the two `.price` boxes and the "50¢ each, in packs of 25 or 50" line), the deadline line, and the FAQ. Also update the `<meta name="description">` and `og:description` tags at the top.
 - **NFC tokens** (`realtors/index.html`): the hero note, the Pricing section, the deadline line, the FAQ, and the meta and `og:` tags.
 - **Preview images** (`assets/img/og-*.png`) also show the prices. If prices change, regenerate them (see "QR codes and preview images" below) or edit them in any image editor.
 
