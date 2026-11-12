@@ -29,7 +29,7 @@ Before you print, check that the prices, deadline and charity wording match the 
 ## Swap the product photos
 
 1. Save each photo in `assets/img/`, for example `squeezer.jpg` and `token.jpg`. A landscape 4:3 photo about 1200×900 px works best (the page crops it to 4:3). Keep each file under about 300 KB so it loads fast on phones.
-2. In `dentists/index.html`, find the `PLACEHOLDER: product photo` comment. Change `src="../assets/img/squeezer-placeholder.svg"` to `src="../assets/img/squeezer.jpg"`, and update `width` and `height` to the photo's real pixel size.
+2. In `dentists/index.html`, the squeezer image is hidden for now. Find the `PLACEHOLDER: product photo` comment and replace the whole comment with the `<img>` line written inside it. Update `width` and `height` to the photo's real pixel size.
 3. Do the same in `realtors/index.html` with `token-placeholder.svg` → `token.jpg`.
 4. Rewrite the `alt="..."` text so it describes what the photo actually shows.
 
@@ -112,7 +112,7 @@ The flyers are **not** in this repo, so they never become public pages. They liv
 - `dentists.html` and `realtors.html`: the source for each flyer.
 - `make_flyers.py`: rebuilds both, using the QR codes and product images from this repo.
 
-To change a flyer, edit its text in `make_flyers.py` and run `python make_flyers.py` from that folder. It needs Google Chrome. If you swap the product photos on the site, update the flyer image too. In `make_flyers.py`, change `squeezer-placeholder.svg` and `token-placeholder.svg` to your photo filenames (.jpg or .png work).
+To change a flyer, edit its text in `make_flyers.py` and run `python make_flyers.py` from that folder. It needs Google Chrome. If you swap the product photos on the site, update the flyer image too. In `make_flyers.py`, the dentist flyer's photo is set to `None` (no image) for now. Change it to your photo filename (for example `"squeezer.jpg"`), and change `token-placeholder.svg` for the realtor flyer. Both .jpg and .png work.
 
 Each flyer has the price, the deadline, the charity line, a large QR code, "text Ivan" with your number, and a "Visited by Ivan on ____ · Visit # ____" line for your log. Print a test page and scan the QR code with a phone before printing a batch.
 
