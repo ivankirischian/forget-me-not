@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Unlisted page: no other page links here, and search engines are told not to index it. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Flyers | Forget Me Not</title>
+  <meta name="theme-color" content="#1d4f91">
+  <link rel="icon" href="../assets/img/flower.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .flyers { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+    @media (min-width: 640px) { .flyers { grid-template-columns: 1fr 1fr; } }
+    .flyer img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 1rem; }
+    .flyer .btn-row { margin-top: 0.75rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <span class="brand"><img src="../assets/img/flower.svg" alt="" width="34" height="34">Forget Me Not</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h1>Printable flyers</h1>
+        <p>Letter size (8.5 &times; 11 in), one page each. Print at 100% / "actual size" so the QR code stays sharp.</p>
+
+        <div class="flyers">
+          <div class="card flyer">
+            <img src="dentists-flyer.png" width="816" height="1056" loading="lazy" alt="Preview of the dentist flyer">
+            <h2>Dentists</h2>
+            <p>Toothpaste squeezers, 50&cent; each.</p>
+            <p class="btn-row">
+              <a class="btn" href="dentists-flyer.pdf" download>Download PDF</a>
+              <a class="btn btn-outline" href="dentists-flyer.pdf">Open</a>
+            </p>
+          </div>
+
+          <div class="card flyer">
+            <img src="realtors-flyer.png" width="816" height="1056" loading="lazy" alt="Preview of the realtor flyer">
+            <h2>Realtors</h2>
+            <p>NFC tokens, $25 per pack of 10.</p>
+            <p class="btn-row">
+              <a class="btn" href="realtors-flyer.pdf" download>Download PDF</a>
+              <a class="btn btn-outline" href="realtors-flyer.pdf">Open</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

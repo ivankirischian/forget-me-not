@@ -7,6 +7,7 @@ A static fundraising site. 100% of what customers pay goes to the Alzheimer Soci
 | `index.html` | https://ivankirischian.github.io/forget-me-not/ | Anyone who types the bare URL. Shows the brand, charity line and contact details, with no product links. |
 | `dentists/index.html` | https://ivankirischian.github.io/forget-me-not/dentists/ | Dentist flyer QR code |
 | `realtors/index.html` | https://ivankirischian.github.io/forget-me-not/realtors/ | Realtor flyer QR code and the sample token |
+| `flyers/index.html` | https://ivankirischian.github.io/forget-me-not/flyers/ | Unlisted: Ivan's page for downloading the printable flyers |
 
 The site is plain HTML with one shared stylesheet (`assets/css/styles.css`). There's no build step. Edit a file, commit and push to `main`, and GitHub Pages republishes in about a minute.
 
@@ -117,12 +118,14 @@ After a week you'll see which approach works better (talking vs. leaving a flyer
 
 ## Printable flyers
 
-The flyers are **not** in this repo, so they never become public pages. They live in `C:\Users\Ivan\Documents\forget-me-not-flyers\`:
+The flyer sources live in `C:\Users\Ivan\Documents\forget-me-not-flyers\`:
 - `dentists-flyer.pdf` and `realtors-flyer.pdf`: letter size, ready to print.
 - `dentists.html` and `realtors.html`: the source for each flyer.
 - `make_flyers.py`: rebuilds both, using the QR codes and product images from this repo.
 
-To change a flyer, edit its text in `make_flyers.py` and run `python make_flyers.py` from that folder. It needs Google Chrome. If you swap the product photos on the site, update the flyer image too. The dentist flyer uses `squeezer.jpg`. For the realtor flyer, change `token-placeholder.svg` for the realtor flyer. Both .jpg and .png work.
+To change a flyer, edit its text in `make_flyers.py` and run `python make_flyers.py` from that folder. It also copies both PDFs and a preview image into this repo's `flyers/` folder. Commit and push to update the download page.
+
+**Download page:** https://ivankirischian.github.io/forget-me-not/flyers/ is unlisted. No page links to it, and it tells search engines not to index it. It isn't password-protected, so anyone with the link can open it. Never link to it from the other pages. It needs Google Chrome. If you swap the product photos on the site, update the flyer image too. The dentist flyer uses `squeezer.jpg`. For the realtor flyer, change `token-placeholder.svg` for the realtor flyer. Both .jpg and .png work.
 
 Each flyer has the price, the deadline, the charity line, a large QR code, "text Ivan" with your number, and a "Visited by Ivan on ____" line. Print a test page and scan the QR code with a phone before printing a batch.
 
